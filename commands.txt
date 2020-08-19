@@ -1,0 +1,12 @@
+docker run -it -p 3000:3000 8666e8891438
+docker run -it -p 3000:3000 -v $(pwd):/app 
+docker run -it -p 3000:3000 -v /app/node_modules -v ${pwd}:/app 8666e8891438
+docker run -it -p 3000:3000 -v /app/node_modules -v /c/Users/username/frontend:/app -e CHOKIDAR_USEPOLLING=true 8666e8891438
+
+docker-compose.yml change
+  web:
+    stdin_open: true
+	
+then
+
+docker-compose down && docker-compose up --build
